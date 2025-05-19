@@ -36,12 +36,13 @@ class CalendarHeader extends StatelessWidget {
         visible: isSelectionMenu == false,
         replacement: Row(
           children: [
-            IconButton(
-              onPressed: onPressBackOnMenu,
-              icon: const Icon(Icons.arrow_back_ios),
-              color: headerModel?.iconsColor ?? Colors.black,
-              iconSize: headerModel?.iconsSize,
-              splashRadius: 20,
+            GestureDetector(
+              onTap: onPressBackOnMenu,
+              child: Icon(
+                Icons.arrow_back_ios,
+                size: headerModel?.iconsSize,
+                color: headerModel?.iconsColor ?? Colors.black,
+              ),
             ),
           ],
         ),
@@ -49,23 +50,28 @@ class CalendarHeader extends StatelessWidget {
           children: [
             if (headerModel?.iconAlignment == HeaderIconAlignment.right)
               titleWidget(context),
-            IconButton(
-              onPressed: onPressPrevious,
-              icon: const Icon(Icons.arrow_back_ios),
-              iconSize: headerModel?.iconsSize,
-              color: headerModel?.iconsColor ?? Colors.black,
-              splashRadius: 20,
+            Padding(
+              padding: const EdgeInsetsDirectional.only(start: 12, end: 4),
+              child: GestureDetector(
+                onTap: onPressBackOnMenu,
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  size: headerModel?.iconsSize,
+                  color: headerModel?.iconsColor ?? Colors.black,
+                ),
+              ),
             ),
             if (headerModel?.iconAlignment == HeaderIconAlignment.center)
               titleWidget(context),
-            IconButton(
-              onPressed: onPressNext,
-              splashRadius: 20,
-              iconSize: headerModel?.iconsSize,
-              color: headerModel?.iconsColor ?? Colors.black,
-              icon: Icon(
-                Icons.arrow_forward_ios,
-                color: headerModel?.iconsColor ?? Colors.black,
+            Padding(
+              padding: const EdgeInsetsDirectional.only(start: 4, end: 12),
+              child: GestureDetector(
+                onTap: onPressNext,
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  size: headerModel?.iconsSize,
+                  color: headerModel?.iconsColor ?? Colors.black,
+                ),
               ),
             ),
             if (headerModel?.iconAlignment == HeaderIconAlignment.left)
