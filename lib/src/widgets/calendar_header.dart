@@ -53,11 +53,11 @@ class CalendarHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsetsDirectional.only(start: 12, end: 4),
               child: GestureDetector(
-                onTap: onPressBackOnMenu,
+                onTap: onPressPrevious,
                 child: Icon(
                   Icons.arrow_back_ios,
                   size: headerModel?.iconsSize,
-                  color: headerModel?.iconsColor ?? Colors.black,
+                  color: headerModel?.iconsColor ?? Colors.red,
                 ),
               ),
             ),
