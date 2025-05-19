@@ -69,7 +69,8 @@ class CalendarDayWidget extends StatelessWidget {
                 if (calendarDayModel.tagBuilder != null &&
                     isOverFlow == false &&
                     isDisable == false)
-                  IgnorePointer(child: calendarDayModel.tagBuilder!(calendarDateTime))
+                  IgnorePointer(
+                      child: calendarDayModel.tagBuilder!(calendarDateTime))
               ],
             ),
           ),
@@ -79,7 +80,7 @@ class CalendarDayWidget extends StatelessWidget {
   }
 
   bool get isDisable {
-    if(calendarDayModel.isDisableDay != null){
+    if (calendarDayModel.isDisableDay != null) {
       return calendarDayModel.isDisableDay!.call(calendarDateTime);
     }
     return calendarDateTime.isBeforeNow && calendarDayModel.disablePastDays;
@@ -92,7 +93,7 @@ class CalendarDayWidget extends StatelessWidget {
     if (isSelected) {
       return calendarDayModel.selectedDecoration;
     }
-    if(calendarDateTime.isToday){
+    if (calendarDateTime.isToday) {
       return calendarDayModel.todayDecoration;
     }
     return calendarDayModel.decoration;
@@ -105,7 +106,7 @@ class CalendarDayWidget extends StatelessWidget {
     if (isSelected) {
       return calendarDayModel.selectedStyle;
     }
-    if(calendarDateTime.isToday){
+    if (calendarDateTime.isToday) {
       return calendarDayModel.todayStyle;
     }
     return calendarDayModel.style;

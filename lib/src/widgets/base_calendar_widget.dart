@@ -49,14 +49,14 @@ abstract class BaseCalendarWidgetState<T extends BaseCalendarWidget>
           (widget.calendarPadding?.bottom ?? 0) +
           (widget.calendarPadding?.top ?? 0),
       onTapNext: () {
-          pageController.nextPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut);
+        pageController.nextPage(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut);
       },
       onTapPrevious: () {
-          pageController.previousPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeInOut);
+        pageController.previousPage(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut);
       },
       onSelectCurrentDate: () => selectCurrentDate(),
       hasWeekDayTitle: widget.hasWeekDayTitle,

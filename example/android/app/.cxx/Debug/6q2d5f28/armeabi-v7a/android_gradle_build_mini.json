@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/novadaycompany/Development/SDK\u0027s/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/novadaycompany/Development/SDK\u0027s/Android/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/novadaycompany/Development/Projects/custom_calender/example/android/app/.cxx/Debug/6q2d5f28/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/novadaycompany/Development/SDK\u0027s/Android/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/novadaycompany/Development/Projects/custom_calender/example/android/app/.cxx/Debug/6q2d5f28/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
